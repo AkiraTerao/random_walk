@@ -1,5 +1,6 @@
 # random_walk
-Probablity at x=0 after N steps
+
+理論計算に使用した数式
 
 ### 1次元ランダムウォーク
 t=2nに原点x=0にいる確率 $u_{2n}$ は
@@ -15,3 +16,19 @@ $$f_{2n}=\frac{1}{2n 2^{2n-2}} \binom{2n-2}{n-1} \,(n\geq 1)$$
 $f_{2n}$の無限和は1に収束する。
 
 $$ \sum_{n=1}^{\infty} f_{2n} = 1$$
+
+### 2次元ランダムウォーク
+
+t=2nに原点x=0にいる確率 $u_{2n}$ は
+
+$$ u_{2n} = \frac{1}{4^{2n}}\sum_{k=0}^{n} \frac{(2n)!}{k!k!(n-k)!(n-k)!} = \frac{1}{4^{2n}} \binom{2n}{n} \sum_{k=0}^{n} \binom{n}{k}^2$$
+
+### 3次元ランダムウォーク
+
+t=2nに原点x=0にいる確率 $u_{2n}$ は
+
+$$ u_{2n} = \frac{1}{6^{2n}}\sum_{0\leq j+k \leq n} \frac{(2n)!}{j!j!k!k!(n-j-k)!(n-j-k)!} $$
+
+書き換えをすると
+
+$$ u_{2n} = \frac{1}{2^{2n}}\binom{2n}{n}\sum_{m=0}^{n} \left[ \frac{1}{3^n}\binom{n}{m} \right]^2 \binom{2m}{m} $$
